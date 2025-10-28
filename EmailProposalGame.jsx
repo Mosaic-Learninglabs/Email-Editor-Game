@@ -15,7 +15,7 @@ const EmailProposalGame = () => {
   const [showConfetti, setShowConfetti] = useState(false);
   const [highlightedText, setHighlightedText] = useState([]);
   const [showHighlightMode, setShowHighlightMode] = useState(false);
-  const [timer, setTimer] = useState(60); // 1 minute per question
+  const [timer, setTimer] = useState(30); // 30 seconds for decision, 60 for fix
   const [chefReaction, setChefReaction] = useState('');
   const timerRef = useRef(null);
 
@@ -326,6 +326,7 @@ const EmailProposalGame = () => {
         // Correctly identified error - now choose fix
         setShowFeedback('choose-fix');
         setChefReaction('👨‍🍳');
+        setTimer(60); // Reset timer to 60 seconds for fix selection
       }
     } else {
       // Wrong identification
@@ -377,7 +378,7 @@ const EmailProposalGame = () => {
       setShowFeedback(false);
       setHighlightedText([]);
       setShowHighlightMode(false);
-      setTimer(60); // Reset timer
+      setTimer(30); // Reset timer to 30 seconds for next question
       setChefReaction('');
     } else {
       setGameState('results');
@@ -397,7 +398,7 @@ const EmailProposalGame = () => {
     setChefsApproval(false);
     setHighlightedText([]);
     setShowHighlightMode(false);
-    setTimer(60);
+    setTimer(30);
     setChefReaction('');
     clearInterval(timerRef.current);
   };
