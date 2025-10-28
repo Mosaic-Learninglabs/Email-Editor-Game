@@ -21,20 +21,20 @@ const EmailProposalGame = () => {
 
   // Funny avatars for students
   const studentAvatars = {
-    'Adrian': '🦁',
-    'David': '🦊',
-    'Kayla': '🦄',
-    'Leanna': '🐼',
-    'Marlene': '🦋',
-    'Karol': '🐨',
-    'Shauna': '🦉'
+    'Maya': '🦁',
+    'Jordan': '🦊',
+    'Alex': '🦄',
+    'Sam': '🐼',
+    'Riley': '🦋',
+    'Casey': '🐨',
+    'Morgan': '🦉'
   };
 
   const questions = [
     // EASY - Quick wins (1-5)
     {
       id: 1,
-      sender: 'Adrian',
+      sender: 'Maya',
       subject: 'Survey Results',
       text: "Our survey shows 83% of students throw away food this means most students waste lunch every day.",
       type: 'run-on',
@@ -49,7 +49,7 @@ const EmailProposalGame = () => {
     },
     {
       id: 2,
-      sender: 'Kayla',
+      sender: 'Alex',
       subject: 'Hmong Food Request',
       text: "Because 39% of students want Hmong food like pho and egg rolls.",
       type: 'fragment',
@@ -64,7 +64,7 @@ const EmailProposalGame = () => {
     },
     {
       id: 3,
-      sender: 'Marlene',
+      sender: 'Riley',
       subject: 'Positive Feedback',
       text: "I wanted to share that 30% of students eat most of their lunch. This shows many students appreciate your cooking!",
       type: 'complete',
@@ -75,7 +75,7 @@ const EmailProposalGame = () => {
     },
     {
       id: 4,
-      sender: 'David',
+      sender: 'Jordan',
       subject: 'Time Problem',
       text: "53% of students have less than 10 minutes to eat that's over half we need more time to enjoy lunch.",
       type: 'run-on',
@@ -90,7 +90,7 @@ const EmailProposalGame = () => {
     },
     {
       id: 5,
-      sender: 'Leanna',
+      sender: 'Sam',
       subject: 'Cultural Food Question',
       text: "When students see food from their culture on the menu.",
       type: 'fragment',
@@ -107,7 +107,7 @@ const EmailProposalGame = () => {
     // MEDIUM - Trickier (6-10)
     {
       id: 6,
-      sender: 'Karol',
+      sender: 'Casey',
       subject: 'Mexican Food Data',
       text: "64% of students want Mexican food that's the top request tacos are especially popular.",
       type: 'run-on',
@@ -122,7 +122,7 @@ const EmailProposalGame = () => {
     },
     {
       id: 7,
-      sender: 'Shauna',
+      sender: 'Morgan',
       subject: 'Health Survey Results',
       text: "According to our data about healthy food with 56% of students saying balance matters.",
       type: 'fragment',
@@ -137,7 +137,7 @@ const EmailProposalGame = () => {
     },
     {
       id: 8,
-      sender: 'Adrian',
+      sender: 'Maya',
       subject: 'Wait Time Question',
       text: "Would it be possible to serve fresher food even if we wait 5 extra minutes? Our survey shows 70% of students would consider it, depending on quality.",
       type: 'complete',
@@ -148,7 +148,7 @@ const EmailProposalGame = () => {
     },
     {
       id: 9,
-      sender: 'David',
+      sender: 'Jordan',
       subject: 'Reducing Waste',
       text: "36% of students don't finish because of taste maybe we could try new recipes this might reduce our 83% waste rate.",
       type: 'run-on',
@@ -163,7 +163,7 @@ const EmailProposalGame = () => {
     },
     {
       id: 10,
-      sender: 'Kayla',
+      sender: 'Alex',
       subject: 'Dessert Request',
       text: "The reason 61% of students want desserts showing it's our second most popular category.",
       type: 'fragment',
@@ -180,7 +180,7 @@ const EmailProposalGame = () => {
     // HARD - Sophisticated (11-15)
     {
       id: 11,
-      sender: 'Marlene',
+      sender: 'Riley',
       subject: 'Rating Analysis',
       text: "The cafeteria got 3.09 out of 5 stars this means it's okay but not great 38% of students don't like today's options and 38% don't have enough time.",
       type: 'run-on',
@@ -195,7 +195,7 @@ const EmailProposalGame = () => {
     },
     {
       id: 12,
-      sender: 'Leanna',
+      sender: 'Sam',
       subject: 'Cultural Diversity Idea',
       text: "By adding Mexican, Asian, and Hmong foods helping students feel connected through family flavors.",
       type: 'fragment',
@@ -210,7 +210,7 @@ const EmailProposalGame = () => {
     },
     {
       id: 13,
-      sender: 'Karol',
+      sender: 'Casey',
       subject: 'Three-Step Plan',
       text: "I propose three changes based on our data. First, add requested items like tacos to help the 38% who dislike current options. Second, improve freshness since 70% will wait 5 minutes for quality. Third, offer smaller portions for students eating less than 25%. These could reduce our 83% waste rate significantly.",
       type: 'complete',
@@ -221,7 +221,7 @@ const EmailProposalGame = () => {
     },
     {
       id: 14,
-      sender: 'Shauna',
+      sender: 'Morgan',
       subject: 'Budget Analysis',
       text: "Mexican food makes financial sense 64% of students want it meaning more would eat lunch this cuts waste where 83% throw food away plus beans, rice, and tortillas are affordable.",
       type: 'run-on',
@@ -236,7 +236,7 @@ const EmailProposalGame = () => {
     },
     {
       id: 15,
-      sender: 'Adrian',
+      sender: 'Maya',
       subject: 'Academic Connection',
       text: "Since research shows nutritious lunch improves academics and only 11% of students eat everything while 53% have under 10 minutes affecting afternoon focus.",
       type: 'fragment',
