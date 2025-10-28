@@ -747,17 +747,26 @@ const EmailProposalGame = () => {
                   <p className="text-sm text-gray-700">Choose the BEST way to fix it:</p>
                 </div>
                 <div className="space-y-3">
-                  {currentQ.fixes.map((fix, index) => (
-                    <button
-                      key={index}
-                      onClick={() => handleFixChoice(index)}
-                      className="w-full text-left py-4 px-5 rounded-lg bg-white border-2 border-gray-300 hover:bg-blue-50 hover:border-blue-500 transition text-gray-800 leading-relaxed transform hover:scale-102"
-                    >
-                      <span className="font-bold text-blue-600 text-base">Fix {index + 1}:</span>
-                      <br />
-                      <span className="text-lg">{fix.text}</span>
-                    </button>
-                  ))}
+                  {currentQ.fixes.map((fix, index) => {
+                    const colors = [
+                      { border: 'border-purple-400', hover: 'hover:bg-purple-50 hover:border-purple-600', label: 'text-purple-600' },
+                      { border: 'border-teal-400', hover: 'hover:bg-teal-50 hover:border-teal-600', label: 'text-teal-600' },
+                      { border: 'border-pink-400', hover: 'hover:bg-pink-50 hover:border-pink-600', label: 'text-pink-600' }
+                    ];
+                    const colorScheme = colors[index];
+
+                    return (
+                      <button
+                        key={index}
+                        onClick={() => handleFixChoice(index)}
+                        className={`w-full text-left py-4 px-5 rounded-lg bg-white border-3 ${colorScheme.border} ${colorScheme.hover} transition-all text-gray-800 leading-relaxed transform hover:scale-102 hover:shadow-lg`}
+                      >
+                        <span className={`font-bold text-base ${colorScheme.label}`}>Fix {index + 1}:</span>
+                        <br />
+                        <span className="text-lg">{fix.text}</span>
+                      </button>
+                    );
+                  })}
                 </div>
               </div>
             )}
