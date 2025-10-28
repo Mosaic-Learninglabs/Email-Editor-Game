@@ -15,7 +15,7 @@ const EmailProposalGame = () => {
   const [showConfetti, setShowConfetti] = useState(false);
   const [highlightedText, setHighlightedText] = useState([]);
   const [showHighlightMode, setShowHighlightMode] = useState(false);
-  const [timer, setTimer] = useState(120); // 2 minutes per question
+  const [timer, setTimer] = useState(60); // 1 minute per question
   const [chefReaction, setChefReaction] = useState('');
   const timerRef = useRef(null);
 
@@ -377,7 +377,7 @@ const EmailProposalGame = () => {
       setShowFeedback(false);
       setHighlightedText([]);
       setShowHighlightMode(false);
-      setTimer(120); // Reset timer
+      setTimer(60); // Reset timer
       setChefReaction('');
     } else {
       setGameState('results');
@@ -397,7 +397,7 @@ const EmailProposalGame = () => {
     setChefsApproval(false);
     setHighlightedText([]);
     setShowHighlightMode(false);
-    setTimer(120);
+    setTimer(60);
     setChefReaction('');
     clearInterval(timerRef.current);
   };
@@ -679,8 +679,8 @@ const EmailProposalGame = () => {
 
           {/* Email Body */}
           <div className="p-6 bg-white">
-            <div className="bg-blue-50 border-l-4 border-blue-500 p-5 rounded-r-lg mb-6">
-              <p className="text-gray-800 leading-relaxed text-base">
+            <div className="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-lg mb-6">
+              <p className="text-gray-800 leading-relaxed text-xl font-medium">
                 {currentQ.text}
               </p>
             </div>
@@ -753,9 +753,9 @@ const EmailProposalGame = () => {
                       onClick={() => handleFixChoice(index)}
                       className="w-full text-left py-4 px-5 rounded-lg bg-white border-2 border-gray-300 hover:bg-blue-50 hover:border-blue-500 transition text-gray-800 leading-relaxed transform hover:scale-102"
                     >
-                      <span className="font-bold text-blue-600">Fix {index + 1}:</span>
+                      <span className="font-bold text-blue-600 text-base">Fix {index + 1}:</span>
                       <br />
-                      <span className="text-sm">{fix.text}</span>
+                      <span className="text-lg">{fix.text}</span>
                     </button>
                   ))}
                 </div>
