@@ -115,7 +115,7 @@ const EmailProposalGame = () => {
       explanation: "RUN-ON! Three statistics crammed together. Professional data needs clear separation!",
       errorLocation: [35, 65],
       fixes: [
-        { text: "64% of students want Mexican food—that's the top request. Tacos are especially popular!", correct: true },
+        { text: "64% of students want Mexican food. That's the top request. Tacos are especially popular!", correct: true },
         { text: "64% of students want Mexican food, that's the top request, tacos are especially popular.", correct: false },
         { text: "64% of students want Mexican food and that's the top request and tacos are especially popular.", correct: false }
       ]
@@ -130,7 +130,7 @@ const EmailProposalGame = () => {
       explanation: "FRAGMENT! This starts describing data but never makes a point. What ABOUT the data?",
       errorLocation: [0, 13],
       fixes: [
-        { text: "Our data shows that 56% of students care about healthy food. They said balance matters—both nutrition and taste!", correct: true },
+        { text: "Our data shows that 56% of students care about healthy food. They said balance matters. Both nutrition and taste!", correct: true },
         { text: "According to our data about healthy food. With 56% of students saying balance matters.", correct: false },
         { text: "According to our data about healthy food with 56% of students saying balance matters, shows this.", correct: false }
       ]
@@ -171,7 +171,7 @@ const EmailProposalGame = () => {
       explanation: "FRAGMENT! 'The reason...' starts a thought but never completes it. What IS the reason, and what should happen?",
       errorLocation: [0, 10],
       fixes: [
-        { text: "61% of students want desserts—making it our second most popular category! Could we add dessert options?", correct: true },
+        { text: "61% of students want desserts. That makes it our second most popular category! Could we add dessert options?", correct: true },
         { text: "The reason 61% of students want desserts. Showing it's our second most popular category.", correct: false },
         { text: "The reason 61% of students want desserts showing it's our second most popular category is important.", correct: false }
       ]
@@ -185,7 +185,7 @@ const EmailProposalGame = () => {
       text: "The cafeteria got 3.09 out of 5 stars this means it's okay but not great 38% of students don't like today's options and 38% don't have enough time.",
       type: 'run-on',
       difficulty: 'hard',
-      explanation: "COMPLEX RUN-ON! Rating, interpretation, and two problems—all without punctuation. Professional analysis needs structure!",
+      explanation: "COMPLEX RUN-ON! Rating, interpretation, and two problems all without punctuation. Professional analysis needs structure!",
       errorLocation: [41, 80],
       fixes: [
         { text: "The cafeteria got 3.09 out of 5 stars. This means it's okay but not great. Specifically, 38% of students don't like today's options and 38% don't have enough time.", correct: true },
@@ -229,7 +229,7 @@ const EmailProposalGame = () => {
       explanation: "ADVANCED RUN-ON! Four logical points (demand, percentage, waste reduction, cost) need separation to be persuasive!",
       errorLocation: [35, 112],
       fixes: [
-        { text: "Mexican food makes financial sense. First, 64% of students want it—meaning more would eat lunch. This cuts waste where 83% throw food away. Plus, beans, rice, and tortillas are affordable!", correct: true },
+        { text: "Mexican food makes financial sense. First, 64% of students want it. That means more would eat lunch. This cuts waste where 83% throw food away. Plus, beans, rice, and tortillas are affordable!", correct: true },
         { text: "Mexican food makes sense, 64% want it, meaning more eat lunch, cuts waste, plus affordable.", correct: false },
         { text: "Mexican food makes sense and 64% want it and more eat lunch and cuts waste and it's affordable.", correct: false }
       ]
@@ -244,7 +244,7 @@ const EmailProposalGame = () => {
       explanation: "SOPHISTICATED FRAGMENT! Sets up research and problems with 'since...' but never requests action or completes the thought!",
       errorLocation: [0, 5],
       fixes: [
-        { text: "Research shows nutritious lunch improves academics. Only 11% of students eat everything, while 53% have under 10 minutes. This affects afternoon focus—can we discuss solutions?", correct: true },
+        { text: "Research shows nutritious lunch improves academics. Only 11% of students eat everything, while 53% have under 10 minutes. This affects afternoon focus. Can we discuss solutions?", correct: true },
         { text: "Since research shows nutritious lunch improves academics. And only 11% eat everything while 53% have under 10 minutes.", correct: false },
         { text: "Since research shows nutritious lunch improves academics and only 11% eat everything while 53% have under 10 minutes, is concerning.", correct: false }
       ]
